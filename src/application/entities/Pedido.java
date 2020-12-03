@@ -16,11 +16,11 @@ public class Pedido {
 		
 	}
 	
-	public Pedido(Integer id, Cliente cliente) {
+	public Pedido(Integer id, Date momento, Cliente cliente, StatusPedido estado) {
 		this.ID = id;
-		this.momento = new Date(System.currentTimeMillis());
+		this.momento = momento;
 		this.cliente = cliente;
-		this.status = StatusPedido.AGUARDANDO_CONFIRMACAO;
+		this.status = estado;
 	}
 	
 	@Override
